@@ -1,0 +1,23 @@
+{
+    "name": "case-stadafint-grupp10",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "scss": "sass --watch src/scss/main.scss src/css/main.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/elilyx10/Case-StadaFint-Grupp10.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/elilyx10/Case-StadaFint-Grupp10/issues"
+    },
+    "homepage": "https://github.com/elilyx10/Case-StadaFint-Grupp10#readme",
+    "dependencies": {
+        "sass": "^1.49.9"
+    }
+}
