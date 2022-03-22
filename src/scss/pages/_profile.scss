@@ -1,0 +1,88 @@
+@use "../variables";
+
+.profile-main {
+  display: flex;
+
+  & p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.profile-right {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 18.72px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  padding: 0 20px;
+  flex: 1;
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+
+  &__column {
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+  }
+
+  &__edit {
+    font-size: 14px;
+  }
+}
+
+.profile-left {
+  flex: 2;
+  border-right: 5px solid variables.$color-dark-beige;
+}
+
+// Style för bokade och färdiga städningar, container + kort
+.booked-cleaning,
+.completed-cleaning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+  }
+
+  &__container {
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__item {
+      color: #000;
+      font-size: 14px;
+
+      background-color: variables.$color-blue-gray;
+      width: 200px;
+      padding: 10px;
+      border-radius: 5px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &__upper {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
