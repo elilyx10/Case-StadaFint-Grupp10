@@ -5,45 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/main.css" />
-        <script src="js/cleaning-home.js"></script>
+        <script src="./js/cleaning-home.js" type="module"></script>
         <title>Grupp 10</title>
     </head>
     <body id="cleaning-home-body">
-        <div id="new-cleaning-modal" class="hidden">
-            <div class="background-effect"></div>
-            <div class="modal-content">
-                <div class="top">
-                    <span>Modal</span>
-                    <span id="new-cleaning-modal-close" class="close"
-                        >&#10005;</span
-                    >
-                </div>
-                <div class="bottom">
-                    <form id="new-cleaning-modal-form">
-                        <label for="customer">Customer</label>
-                        <input type="text" id="customer" required />
-                        <div>
-                            <div>
-                                <label for="date">Datum</label>
-                                <input type="date" id="date" required />
-                            </div>
-                            <div>
-                                <label for="time">Tid</label>
-                                <input type="time" id="time" required />
-                            </div>
-                        </div>
-                        <label for="description"> Beskrivning </label>
-                        <textarea id="description" required></textarea>
-                        <input
-                            type="button"
-                            id="new-cleaning-modal-confirm"
-                            value="Klar"
-                        />
-                    </form>
-                </div>
-            </div>
-        </div>
-
         <header>
             <div id="top">
                 <h1>Boka Städning</h1>
@@ -55,10 +20,35 @@
             </nav>
         </header>
         <main>
-            <div id="cleaning-sessions">test</div>
-            <div id="controls">
-                <button id="new-cleaning">Boka ny städning</button>
-                <button id="show-modal">Visa</button>
+            <div id="cleaning-sessions">
+                <div class="form-wrapper">
+                    <div class="top">
+                        <span>Ny städning</span>
+                    </div>
+                    <div class="bottom">
+                        <form id="new-cleaning-form">
+                            <label for="customer">Customer</label>
+                            <input type="text" id="customer" required />
+                            <div>
+                                <div>
+                                    <label for="date">Datum</label>
+                                    <input type="date" id="date" required />
+                                </div>
+                                <div>
+                                    <label for="time">Tid</label>
+                                    <input type="time" id="time" required />
+                                </div>
+                            </div>
+                            <label for="description"> Beskrivning </label>
+                            <textarea id="description" required></textarea>
+                            <input
+                                type="button"
+                                id="new-cleaning-confirm"
+                                value="Lägg till"
+                            />
+                        </form>
+                    </div>
+                </div>
             </div>
         </main>
         <footer>
