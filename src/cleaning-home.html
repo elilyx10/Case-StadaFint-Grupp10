@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="js/cleaning-home.js"></script>
+        <title>Grupp 10</title>
+    </head>
+    <body id="cleaning-home-body">
+        <div id="new-cleaning-modal" class="hidden">
+            <div class="background-effect"></div>
+            <div class="modal-content">
+                <div class="top">
+                    <span>Modal</span>
+                    <span id="new-cleaning-modal-close" class="close"
+                        >&#10005;</span
+                    >
+                </div>
+                <div class="bottom">
+                    <form id="new-cleaning-modal-form">
+                        <label for="customer">Customer</label>
+                        <input type="text" id="customer" required />
+                        <div>
+                            <div>
+                                <label for="date">Datum</label>
+                                <input type="date" id="date" required />
+                            </div>
+                            <div>
+                                <label for="time">Tid</label>
+                                <input type="time" id="time" required />
+                            </div>
+                        </div>
+                        <label for="description"> Beskrivning </label>
+                        <textarea id="description" required></textarea>
+                        <input
+                            type="button"
+                            id="new-cleaning-modal-confirm"
+                            value="Klar"
+                        />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <div id="top">
+                <h1>Boka Städning</h1>
+            </div>
+
+            <nav>
+                <a href="./index.html">Hem</a>
+                <a href="./cleaning-home.html">Städning</a>
+            </nav>
+        </header>
+        <main>
+            <div id="cleaning-sessions">test</div>
+            <div id="controls">
+                <button id="new-cleaning">Boka ny städning</button>
+                <button id="show-modal">Visa</button>
+            </div>
+        </main>
+        <footer>
+            <ul>
+                <ol>
+                    <h4>Authors</h4>
+                </ol>
+                <ol>
+                    Elias Fredriksson
+                </ol>
+                <ol>
+                    Elias Lyxell
+                </ol>
+                <ol>
+                    Johan Elgström
+                </ol>
+                <ol>
+                    Noah Lissner
+                </ol>
+            </ul>
+        </footer>
+    </body>
+</html>
