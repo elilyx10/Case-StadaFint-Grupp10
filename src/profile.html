@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Grupp 10</title>
+  </head>
+  <body>
+    <header>
+      <div id="top">
+        <h1>Mina Sidor</h1>
+      </div>
+      <nav>
+        <a href="./index.html">Hem</a>
+        <a href="./cleaning-home.html">Städning</a>
+        <a href="./profile.html">Mina Sidor</a>
+      </nav>
+    </header>
+
+    <main class="profile-main">
+      <section class="profile-left">
+        <!-- Bokade städningar -->
+        <div class="booked-cleaning">
+          <h3 class="booked-cleaning__title">Bokade Städningar</h3>
+
+          <!-- Container som håller i "korten" -->
+          <div class="booked-cleaning__container">
+            <!-- Start Enskilt "kort" -->
+            <div class="booked-cleaning__container__item">
+              <div class="booked-cleaning__container__item__upper">
+                <p class="booked-cleaning__container__item__upper__title">
+                  Städning
+                </p>
+                <p class="booked-cleaning__container__item__upper__date">
+                  2022/03/22
+                </p>
+              </div>
+              <div class="booked-cleaning__container__item__lower">
+                <p>Placeholder</p>
+              </div>
+            </div>
+            <!-- Slut Enskilt "kort" -->
+          </div>
+        </div>
+
+        <!-- Färdiga städningar -->
+        <div class="completed-cleaning">
+          <h3 class="completed-cleaning__title">Slutförda Städningar</h3>
+
+          <!-- Container som håller i "korten" -->
+          <div class="completed-cleaning__container">
+            <!-- Enskilt "kort" -->
+            <div class="completed-cleaning__container__item">
+              <div class="completed-cleaning__container__item__upper">
+                <p class="completed-cleaning__container__item__upper__title">
+                  Städning
+                </p>
+                <p class="completed-cleaning__container__item__upper__date">
+                  2022/03/22
+                </p>
+              </div>
+              <div class="completed-cleaning__container__item__lower">
+                <p>Placeholder</p>
+              </div>
+            </div>
+            <!-- Slut Enskilt "kort" -->
+          </div>
+        </div>
+      </section>
+      <section class="profile-right">
+        <h3>Profil</h3>
+        <div class="profile-info">
+          <span class="profile-info__subtitle">Information</span>
+          <div class="profile-info__column">
+            <p>Name:</p>
+            <p>John Doe</p>
+          </div>
+          <div class="profile-info__column">
+            <p>Email:</p>
+            <p>john@doe.com</p>
+          </div>
+          <span class="profile-info__subtitle">Städningar</span>
+          <div class="profile-info__column">
+            <p>Bokade Städningar:</p>
+            <p>1</p>
+          </div>
+          <div class="profile-info__column">
+            <p>Slutförda Städningar:</p>
+            <p>1</p>
+          </div>
+        </div>
+        <span class="profile-info__edit">Redigera Profil</span>
+      </section>
+    </main>
+  </body>
+</html>
