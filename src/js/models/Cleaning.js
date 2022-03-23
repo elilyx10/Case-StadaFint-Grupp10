@@ -5,6 +5,7 @@ export default class Cleaning {
         this.description = cleaningPrototype.description;
         this.finished = cleaningPrototype.finished;
         this.acceptedByCustomer = cleaningPrototype.acceptedByCustomer;
+        this.cleaner = cleaningPrototype.cleaner;
     }
 
     static fetchCleanings() {
