@@ -8,12 +8,16 @@ window.onload = () => {
 
   // Filtrera cleanings efter completed eller inte completed
   const completedCleanings = cleanings.filter((e) => e.finished === true);
-  const bookedCleanigns = cleanings.filter((e) => e.finished === false);
+  const bookedCleanings = cleanings.filter((e) => e.finished === false);
 
-  console.log(completedCleanings, bookedCleanigns);
+  // Give a number to total cleanings, (booked and completed)
+  document.getElementById("bookedCleaningsCount").textContent =
+    bookedCleanings.length;
+  document.getElementById("completedCleaningsCount").textContent =
+    completedCleanings.length;
 
   // Kallar funktionerna med de filtrerade arraysen
-  createBookedCleanings(bookedCleanigns);
+  createBookedCleanings(bookedCleanings);
   createCompletedCleanings(completedCleanings);
 };
 
