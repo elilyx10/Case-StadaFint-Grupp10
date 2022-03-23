@@ -60,6 +60,10 @@ function createCompletedCleanings(cleanings) {
         <div class="completed-cleaning__container__item__lower">
           <p>${cleaning.description}</p>
         </div>
+          <div class="accept-deny-container">
+            <button class="accept-btn btn">Godkänn 👍</button>
+            <button class="deny-btn btn">Underkänn 👎</button>
+          </div>
       </div>
         `;
 
