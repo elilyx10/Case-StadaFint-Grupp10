@@ -9,6 +9,7 @@ window.onload = () => {
     currentCleanings = Cleaning.fetchCleanings();
     currentUsers = User.fetchUsers();
     initializeForm();
+    initializeModal();
     console.log("CLEANINGS: ", currentCleanings);
     console.log("USERS: ", currentUsers);
 
@@ -69,9 +70,38 @@ function addNewCleaning() {
         finished: false,
         acceptedByCustomer: false,
     });
-    currentCleanings.push(newCleaning);
-    Cleaning.storeCleanings(currentCleanings);
 
-    let aTagHome = document.getElementById("home-a-tag");
-    aTagHome.click();
+    triggerModal(newCleaning);
+    // currentCleanings.push(newCleaning);
+    // Cleaning.storeCleanings(currentCleanings);
+
+    // let aTagHome = document.getElementById("home-a-tag");
+    // aTagHome.click();
+}
+
+function initializeModal() {
+    let modalDeny = document.getElementById("modal-deny");
+    let modalConfirm = document.getElementById("modal-confirm");
+    let modal = document.getElementById("cleaning-modal");
+
+    modalDeny.addEventListener("click", () => {
+        modal.classList.remove("modal-in");
+        modal.classList.add("modal-out");
+
+        setTimeout(() => {
+            modal.classList.remove("visible");
+            modal.classList.add("hidden");
+        }, 350);
+    });
+}
+
+function triggerModal(newCleaning) {
+    let modal = document.getElementById("cleaning-modal");
+
+    modal.classList.remove("modal-out");
+    modal.classList.add("modal-in");
+    modal.classList.remove("hidden");
+    modal.classList.add("visible");
+
+    let innerModalContainer = document.getElementById("__inner-modal-content");
 }
