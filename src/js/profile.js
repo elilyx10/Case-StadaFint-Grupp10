@@ -3,8 +3,15 @@ import User from "./models/User.js";
 import runHeader from "./header.js";
 
 window.onload = () => {
+   runHeader();
+  // Ta in cleanings och user objekt från localstorage
+  const cleanings = Cleaning.fetchCleanings();
+  const users = User.fetchUsers();
+  // Filtrera cleanings efter completed eller inte completed
+  const completedCleanings = cleanings.filter((e) => e.finished === true);
+  const bookedCleanings = cleanings.filter((e) => e.finished === false);
+  
     // Ta in cleanings och user objekt från localstorage
-    runHeader();
     const cleanings = Cleaning.fetchCleanings();
     const users = User.fetchUsers();
 
@@ -17,6 +24,12 @@ window.onload = () => {
         bookedCleanings.length;
     document.getElementById("completedCleaningsCount").textContent =
         completedCleanings.length;
+  // Kallar funktionerna med de filtrerade arraysen
+  createBookedCleanings(bookedCleanings);
+  createCompletedCleanings(completedCleanings);
+
+  // Kallar funktionen som populatar user med den första användaren i listan
+  populateUser(users[0]);
 
     // Kallar funktionerna med de filtrerade arraysen
     createBookedCleanings(bookedCleanings);
@@ -79,4 +92,9 @@ function createCompletedCleanings(cleanings) {
 
         CompletedContainer.insertAdjacentHTML("afterbegin", html);
     });
+}
+
+function populateUser(user) {
+  document.getElementById("user__name").textContent = user.username;
+  document.getElementById("user__role").textContent = user.role;
 }
