@@ -31,7 +31,7 @@
           <!-- Container som håller i "korten" -->
           <div class="booked-cleaning__container">
             <!-- Start Enskilt "kort" -->
-            <div class="booked-cleaning__container__item">
+            <div class="booked-cleaning__container__item" id='pre-card'>
               <div class="booked-cleaning__container__item__upper">
                 <p class="booked-cleaning__container__item__upper__title">
                   Städning
@@ -42,6 +42,9 @@
               </div>
               <div class="booked-cleaning__container__item__lower">
                 <p>Placeholder</p>
+              </div>
+              <div class="button-container">
+                <button class="deny-btn btn" id="cancel-btn" >Avboka</button>
               </div>
             </div>
             <!-- Slut Enskilt "kort" -->
@@ -55,7 +58,7 @@
           <!-- Container som håller i "korten" -->
           <div class="completed-cleaning__container">
             <!-- Enskilt "kort" -->
-            <div class="completed-cleaning__container__item">
+            <div class="completed-cleaning__container__item" id="card">
               <div class="completed-cleaning__container__item__upper">
                 <p class="completed-cleaning__container__item__upper__title">
                   Städning
@@ -67,9 +70,9 @@
               <div class="completed-cleaning__container__item__lower">
                 <p>Placeholder</p>
               </div>
-              <div class="accept-deny-container">
-                <button class="accept-btn btn">Godkänn 👍</button>
-                <button class="deny-btn btn">Underkänn 👎</button>
+              <div class="button-container" id="accept-deny-container">
+                <button class="accept-btn btn" id="accept-btn">Godkänn 👍</button>
+                <button class="deny-btn btn" id="deny-btn">Underkänn 👎</button>
               </div>
             </div>
             <!-- Slut Enskilt "kort" -->
