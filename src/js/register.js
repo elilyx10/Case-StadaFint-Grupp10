@@ -29,7 +29,9 @@ function initialize() {
                 if (checkRegister()) {
                     window.location.href = e.target.href;
                 } else {
-                    alert("Användarnamnet upptaget. Försök igen.");
+                    alert(
+                        "Användarnamnet upptaget / inte valt roll. Försök igen."
+                    );
                 }
             }
         });

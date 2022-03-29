@@ -5,7 +5,8 @@ window.onload = () => {
 };
 
 function initialize() {
-    document.getElementById("login-confirm").addEventListener("click", () => {
+    document.getElementById("login-confirm").addEventListener("click", (e) => {
+        e.preventDefault();
         let form = document.getElementById("login-form");
         form.reportValidity();
         if (form.checkValidity()) {
@@ -16,10 +17,9 @@ function initialize() {
                 "login-form__password"
             ).value;
             if (checkLoginInfo(username, password)) {
-                console.log("FOUND IN STORAGE");
+                window.location.href = e.target.href;
             } else {
-                console.log("INVALID");
-                tryAgain();
+                alert("Wrong username or password. Try again.");
             }
         }
     });
@@ -32,14 +32,10 @@ function checkLoginInfo(username, password) {
     let users = User.fetchUsers();
     let foundUsers = users.filter((e) => e.username == username);
 
-    console.log(users);
-    console.log(foundUsers);
-
     if (foundUsers.length < 1) return false;
     if (foundUsers.length > 1) return false;
 
     if (password != foundUsers[0].password) return false;
+    localStorage.setItem("loggedInUser", JSON.stringify(foundUsers[0]));
     return true;
 }
-
-function tryAgain() {}
