@@ -25,7 +25,7 @@ window.onload = () => {
 function createBookedCleanings(cleanings) {
   cleanings.forEach((cleaning) => {
     const html = `
-    <div class="booked-cleaning__container__item">
+    <div class="booked-cleaning__container__item" id='pre-card'>
     <div class="booked-cleaning__container__item__upper">
       <p class="booked-cleaning__container__item__upper__title">
         Städning
@@ -37,6 +37,9 @@ function createBookedCleanings(cleanings) {
     <div class="booked-cleaning__container__item__lower">
       <p>${cleaning.description}</p>
     </div>
+    <div class="button-container">
+      <button class="deny-btn btn" id="cancel-btn" >Avboka</button>
+    </div>
   </div>
     `;
 
@@ -45,14 +48,33 @@ function createBookedCleanings(cleanings) {
     );
 
     BookedContainer.insertAdjacentHTML("afterbegin", html);
+
+    let cancelButton = document.getElementById('cancel-btn')
+    if(cancelButton) {
+      cancelButton.addEventListener('click', cancelHandeler)
+    }
+
+    function cancelHandeler() {
+      document.getElementById('pre-card').remove()
+    }
   });
 }
+// FÖR HÅRDKODADE KORTET +++++++++++++++++++++++
+let cancelButton = document.getElementById('cancel-btn')
+    if(cancelButton) {
+      cancelButton.addEventListener('click', cancelHandeler)
+    }
+
+function cancelHandeler() {
+  document.getElementById('pre-card').remove()
+}
+// FÖR HÅRDKODADE KORTET +++++++++++++++++++++++
 
 // Funktion som skapar completed cleanings kort
 function createCompletedCleanings(cleanings) {
   cleanings.forEach((cleaning) => {
     const html = `
-        <div class="completed-cleaning__container__item">
+        <div class="completed-cleaning__container__item" id="card">
         <div class="completed-cleaning__container__item__upper">
           <p class="completed-cleaning__container__item__upper__title">
             Städning
@@ -65,8 +87,8 @@ function createCompletedCleanings(cleanings) {
           <p>${cleaning.description}</p>
         </div>
           <div class="accept-deny-container">
-            <button class="accept-btn btn">Godkänn 👍</button>
-            <button class="deny-btn btn">Underkänn 👎</button>
+            <button class="accept-btn btn" id="accept-btn" >Godkänn 👍</button>
+            <button class="deny-btn btn" id="deny-btn">Underkänn 👎</button>
           </div>
       </div>
         `;
@@ -74,7 +96,45 @@ function createCompletedCleanings(cleanings) {
     const CompletedContainer = document.querySelector(
       ".completed-cleaning__container"
     );
-
     CompletedContainer.insertAdjacentHTML("afterbegin", html);
+
+    let acceptButton = document.getElementById('accept-btn')
+    if(acceptButton) {
+      acceptButton.addEventListener('click', acceptHandeler)
+    }
+    let denyButton = document.getElementById('deny-btn')
+    if(denyButton) {
+      denyButton.addEventListener('click', denyHandeler)
+    }
+    function acceptHandeler() {
+      cleaning.acceptedByCustomer = 'accepted'
+      document.getElementById('card').classList.add('accept-border')
+      document.getElementById('accept-deny-container').remove()
+    }
+    function denyHandeler() {
+      cleaning.acceptedByCustomer = 'denied'
+      document.getElementById('card').classList.add('deny-border')
+      document.getElementById('accept-deny-container').remove()
+    }
+
   });
+  // FÖR HÅRDKODADE KORTET +++++++++++++++++++++++
+  let acceptButton = document.getElementById('accept-btn')
+    if(acceptButton) {
+      acceptButton.addEventListener('click', acceptHandeler)
+    }
+  let denyButton = document.getElementById('deny-btn')
+    if(denyButton) {
+      denyButton.addEventListener('click', denyHandeler)
+    }
+
+  function acceptHandeler() {
+    document.getElementById('card').classList.add('accept-border')
+    document.getElementById('accept-deny-container').remove()
+  }
+  function denyHandeler() {
+    document.getElementById('card').classList.add('deny-border')
+    document.getElementById('accept-deny-container').remove()
+  }
+  // FÖR HÅRDKODADE KORTET +++++++++++++++++++++++
 }
