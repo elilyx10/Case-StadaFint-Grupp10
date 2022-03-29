@@ -5,7 +5,6 @@ window.onload = () => {
   // Ta in cleanings och user objekt från localstorage
   const cleanings = Cleaning.fetchCleanings();
   const users = User.fetchUsers();
-  console.log(users);
   // Filtrera cleanings efter completed eller inte completed
   const completedCleanings = cleanings.filter((e) => e.finished === true);
   const bookedCleanings = cleanings.filter((e) => e.finished === false);
