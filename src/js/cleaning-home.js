@@ -1,6 +1,7 @@
 import Cleaning from "./models/Cleaning.js";
 import User from "./models/User.js";
 import { ROLE } from "./models/Role.js";
+import runHeader from "./header.js";
 
 let currentCleanings = [];
 let currentUsers = [];
@@ -8,27 +9,10 @@ let validInput = false;
 
 window.onload = () => {
     currentCleanings = Cleaning.fetchCleanings();
-    currentUsers = User.fetchUsers();
+    runHeader();
     initializeForm();
     initializeModal();
     console.log("CLEANINGS: ", currentCleanings);
-    console.log("USERS: ", currentUsers);
-
-    // let testUser = new User({
-    //     username: "Kalle",
-    //     password: "123",
-    //     role: ROLE.CUSTOMER,
-    // });
-
-    // let testCleaner = new User({
-    //     username: "Albert",
-    //     password: "123",
-    //     role: ROLE.CLEANER,
-    // });
-
-    // currentUsers.push(testUser);
-    // currentUsers.push(testCleaner);
-    // User.storeUsers(currentUsers);
 };
 
 function initializeForm() {
@@ -75,11 +59,6 @@ function createNewCleaning() {
     });
 
     triggerModal(newCleaning);
-    // currentCleanings.push(newCleaning);
-    // Cleaning.storeCleanings(currentCleanings);
-
-    // let aTagHome = document.getElementById("home-a-tag");
-    // aTagHome.click();
 }
 
 function initializeModal() {

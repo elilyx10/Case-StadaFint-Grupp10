@@ -1,6 +1,9 @@
+import runHeader from "./header.js";
+
 let recipt = null;
 
 window.onload = () => {
+    runHeader();
     recipt = JSON.parse(localStorage.getItem("recipt"));
     if (recipt === null) {
         render(null);
