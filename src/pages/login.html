@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../scss/pages/login-register.scss">
-    <title>Login</title>
-</head>
-<body>
-    <div class="login-main-cnt">
-        <div class="login-box-cnt">
-    
-            <div class="login-wrapper">
-    
-                <span class="login-title">LOGIN</span>
-                <span class="register-user-span">
-                    <a href="./registration.html" class="register-link">SIGN UP</a>
-                </span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="../scss/pages/login-register.scss" />
+        <script src="../js/login.js" type="module"></script>
+        <title>Login</title>
+    </head>
+    <body>
+        <div class="login-main-cnt">
+            <div class="login-box-cnt">
+                <div class="login-wrapper">
+                    <span class="login-title">LOGIN</span>
+                    <span class="register-user-span">
+                        <a href="./registration.html" class="register-link"
+                            >Registrera dig</a
+                        >
+                    </span>
+                </div>
+
+                <form id="login-form" class="login-form">
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="Användarnamn"
+                        class="username-input"
+                        id="login-form__username"
+                        required
+                    />
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Lösenord"
+                        class="password-input"
+                        id="login-form__password"
+                        required
+                    />
+
+                    <input type="button" id="login-confirm" value="Logga in"></input>
+                    <!-- <a href="../index.html" class="login-btn">Log In</a> -->
+                </form>
             </div>
-    
-            <form action="/login" method="post" class="login-form">
-                <input
-                    type="text"
-                    name="username"
-                    placeholder="Username"
-                    class="username-input"
-                />
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    class="password-input"
-                />
-                
-                <a href="../index.html" class="login-btn">Log In</a>
-            </form>
         </div>
-    </div>
-</body>
+    </body>
 </html>

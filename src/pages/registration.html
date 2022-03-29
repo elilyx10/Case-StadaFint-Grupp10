@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../scss/pages/login-register.scss">
-    <title>Registration</title>
-</head>
-<body>
-    <div class="register-main-cnt">
-        <div class="register-box-cnt">
-            <div class="register-wrapper">
-                <span class="register-title">REGISTER</span>
-                <a href="./login.html" class="register-link">or login in as a existing user</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="../scss/pages/login-register.scss" />
+        <script src="../js/register.js" type="module"></script>
+        <title>Registration</title>
+    </head>
+    <body>
+        <div class="register-main-cnt">
+            <div class="register-box-cnt">
+                <div class="register-wrapper">
+                    <span class="register-title">REGISTER</span>
+                    <a href="./login.html" class="register-link"
+                        >or login in as a existing user</a
+                    >
+                </div>
+                <form id="register-form" class="register-form">
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="Användarnamn"
+                        class="username-input"
+                        id="register-username"
+                        required
+                    />
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Lösenord"
+                        class="password-input"
+                        id="register-password"
+                        required
+                    />
+                    <input
+                        type="password"
+                        name="confirmPassword"
+                        placeholder="Bekräfta lösenord"
+                        class="password-input"
+                        id="register-password-confirm"
+                        required
+                    />
+
+                    <select id="register-select" required>
+                        <option value="--" selected hidden>--</option>
+                    </select>
+
+                    <a
+                        value="Registrera"
+                        id="register-confirm"
+                        class="register-btn"
+                        href="../index.html"
+                    >
+                        Registrera
+                    </a>
+                </form>
             </div>
-            <form action="/register" method="post" class="register-form">
-                <input
-                    type="text"
-                    name="username"
-                    placeholder="Username"
-                    class="username-input"
-                />
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    class="password-input"
-                />
-                <input
-                    type="password"
-                    name="confirmPassword"
-                    placeholder="Confirm Password"
-                    class="password-input"
-                />
-                <input type="text" name="role" value="user" hidden />
-                <a href="../index.html" class="register-btn">Register</a>
-            </form>
         </div>
-    </div>
-</body>
+    </body>
 </html>
-
-
