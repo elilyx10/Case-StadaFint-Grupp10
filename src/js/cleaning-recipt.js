@@ -10,6 +10,12 @@ window.onload = () => {
     } else {
         render(recipt);
     }
+
+    document.getElementById("done-button").addEventListener("click", (e) => {
+        e.preventDefault();
+        localStorage.removeItem("recipt");
+        window.location.href = e.target.href;
+    });
 };
 
 function render(recipt) {

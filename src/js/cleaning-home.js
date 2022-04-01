@@ -9,6 +9,7 @@ let validInput = false;
 
 window.onload = () => {
     currentCleanings = Cleaning.fetchCleanings();
+    currentUsers = User.fetchUsers();
     runHeader();
     initializeForm();
     initializeModal();
@@ -22,8 +23,8 @@ function initializeForm() {
         cleaningForm.reportValidity();
         validInput = false;
         if (cleaningForm.checkValidity()) {
-            createNewCleaning();
             validInput = true;
+            createNewCleaning();
         }
     });
 
@@ -55,7 +56,7 @@ function createNewCleaning() {
         ).toString(),
         description: descriptionTag.value,
         finished: false,
-        acceptedByCustomer: false,
+        acceptedByCustomer: null,
     });
 
     triggerModal(newCleaning);

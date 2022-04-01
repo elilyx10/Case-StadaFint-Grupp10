@@ -1,136 +1,164 @@
 @use "../variables";
 
 .profile-main {
-  display: flex;
+    display: flex;
 
-  & p {
-    margin: 0;
-    padding: 0;
-  }
+    & p {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .profile-right {
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 18.72px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 18.72px;
 }
 
 .profile-info {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 100%;
-  padding: 0 20px;
-  flex: 1;
-
-  &__subtitle {
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 0;
-  }
-
-  &__column {
     display: flex;
+    flex-direction: column;
     gap: 5px;
-    font-size: 16px;
-  }
+    width: 100%;
+    padding: 0 20px;
+    flex: 1;
 
-  &__edit {
-    font-size: 16px;
-    cursor: pointer;
-
-    &:hover {
-      text-decoration: underline;
+    &__subtitle {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 0;
     }
-  }
+
+    &__column {
+        display: flex;
+        gap: 5px;
+        font-size: 16px;
+    }
+
+    &__edit {
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .profile-left {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 2;
-  border-right: 5px solid variables.$color-dark-beige;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2;
+    border-right: 5px solid variables.$color-dark-beige;
 }
 
 // Style för bokade och färdiga städningar, container + kort
 .booked-cleaning,
 .completed-cleaning {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  &__container {
-    width: 100%;
-    padding: 20px;
-
+    flex: 1;
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
-    &__item {
-      color: #000;
-      font-size: 16px;
-
-      background-color: variables.$color-blue-gray;
-      width: 200px;
-      padding: 10px;
-      border-radius: 5px;
-
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-
-      &__upper {
+    &__container {
+        gap: 10px;
+        width: 100%;
         display: flex;
-        justify-content: space-between;
-      }
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__item {
+            color: #000;
+            font-size: 16px;
+
+            background-color: variables.$color-blue-gray;
+            width: 200px;
+            padding: 10px;
+            border-radius: 5px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            &__upper {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                align-items: center;
+                padding: 5px;
+                border-radius: 2px;
+
+                background-color: rgb(255, 255, 255);
+
+                &__date {
+                    font-size: 0.8em;
+                }
+            }
+
+            &__lower {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .cleaning-description {
+                    color: rgb(255, 255, 255);
+                    font-size: 0.9em;
+                    background-color: rgba(107, 129, 160, 0.551);
+                    padding: 5px;
+                    border-radius: 2px;
+                }
+            }
+            &__buttons {
+                display: flex;
+                justify-content: space-between;
+            }
+            .cleaning-status {
+                text-align: center;
+            }
+        }
     }
-  }
 }
 .button-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  .btn {
-    width: 95%;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    border: 1px solid black;
-    font-weight: 300;
-    transition: all 0.2s ease-in-out;
-    text-align: center;
-    cursor: pointer;
-  }
-  .accept-btn {
-    background-color: rgb(0, 255, 0);
-  }
-  .accept-btn:hover {
-    background-color: rgb(0, 204, 0);
-    transform: scale(1.05);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .btn {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        border: 1px solid black;
+        font-weight: 300;
+        transition: all 0.2s ease-in-out;
+        text-align: center;
+        cursor: pointer;
+    }
+    .accept-btn {
+        background-color: rgb(0, 255, 0);
+    }
+    .accept-btn:hover {
+        background-color: rgb(0, 204, 0);
+        transform: scale(1.05);
 
-    font-weight: 700;
-  }
-  .deny-btn {
-    background-color: red;
-  }
-  .deny-btn:hover {
-    background-color: rgb(214, 3, 3);
-    transform: scale(1.05);
-    font-weight: 700;
-  }
+        font-weight: 700;
+    }
+    .deny-btn {
+        background-color: red;
+    }
+    .deny-btn:hover {
+        background-color: rgb(214, 3, 3);
+        transform: scale(1.05);
+        font-weight: 700;
+    }
 }
 .accept-border {
-  border: 5px solid rgb(0, 255, 0);
+    border: 5px solid rgb(0, 255, 0);
 }
 .deny-border {
-  border: 5px solid red;
+    border: 5px solid red;
 }
 
 #gdpr-modal {

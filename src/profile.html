@@ -1,125 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <script src="./js/profile.js" type="module"></script>
-    <title>Grupp 10</title>
-  </head>
-  <body>
-    <div id="gdpr-modal" class="modal-in hidden">
-      <div id="gdpr-modal-background"></div>
-      <div class="modal-content">
-          <div id="__inner-modal-content">
-            <h2>GDPR</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde eaque placeat doloremque repellat ab repellendus. Hic laudantium illum porro nesciunt minima id illo molestias ratione excepturi quam, voluptatum recusandae sed?</p>
-            <p>Smerten i sig selv er kærligheden til hovedet, det adipisiske Derfor er det acceptabelt at afvise smerten og undgås. Han hepper på ham, men så ved de ikke, hvordan de skal fange ham på grund af de mindste ærgrelser i ham, men hans fornøjelser er accepteret!</p>
-            <p>Ο ίδιος ο πόνος είναι η αγάπη του κύριου, του αδιπίσικου Ως εκ τούτου, είναι αποδεκτό να απωθεί τον πόνο και να αποφεύγεται. Του ζητωκραυγάζει, αλλά και πάλι, δεν ξέρουν πώς να τον πιάσουν λόγω των παραμικρών ενοχλήσεων μέσα του, αλλά οι απολαύσεις του γίνονται δεκτές!</p>
-            <p>Самата болка е любовта на главното, адиписичното Следователно е приемливо болката да се отблъсква и да се избягва. Той наздравява за него, но пак не знаят как да го хванат от най-малките ядове в него, но удоволствията му се приемат!</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <script src="./js/profile.js" type="module"></script>
+        <title>Grupp 10</title>
+    </head>
+    <body>
+      <div id="gdpr-modal" class="modal-in hidden">
+        <div id="gdpr-modal-background"></div>
+          <div class="modal-content">
+            <div id="__inner-modal-content">
+              <h2>GDPR</h2>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde eaque placeat doloremque repellat ab repellendus. Hic laudantium illum porro nesciunt minima id illo molestias ratione excepturi quam, voluptatum recusandae sed?</p>
+              <p>Smerten i sig selv er kærligheden til hovedet, det adipisiske Derfor er det acceptabelt at afvise smerten og undgås. Han hepper på ham, men så ved de ikke, hvordan de skal fange ham på grund af de mindste ærgrelser i ham, men hans fornøjelser er accepteret!</p>
+              <p>Ο ίδιος ο πόνος είναι η αγάπη του κύριου, του αδιπίσικου Ως εκ τούτου, είναι αποδεκτό να απωθεί τον πόνο και να αποφεύγεται. Του ζητωκραυγάζει, αλλά και πάλι, δεν ξέρουν πώς να τον πιάσουν λόγω των παραμικρών ενοχλήσεων μέσα του, αλλά οι απολαύσεις του γίνονται δεκτές!</p>
+              <p>Самата болка е любовта на главното, адиписичното Следователно е приемливо болката да се отблъсква и да се избягва. Той наздравява за него, но пак не знаят как да го хванат от най-малките ядове в него, но удоволствията му се приемат!</p>
+            </div>
+            <div class="button-container">
+              <button class="deny-btn btn" id="gdpr-close">Stäng</button>
+            </div>
           </div>
-          <div class="button-container">
-                  <button class="deny-btn btn" id="gdpr-close">Stäng</button>
-              </div>
-          </div>
+        </div>
       </div>
-  </div>
-    <header>
-      <div id="top">
-        <h1>Mina Sidor</h1>
-      </div>
-      <nav>
-        <a id="home-a-tag" href="./index.html">Hem</a>
-        <a href="./cleaning-home.html">Boka städning</a>
-        <a id="login-link" href="./pages/login.html">Logga in</a>
-        <a id="logout-link" href="./index.html">Logga ut</a>
-        <a id="profile-link" href="./profile.html">Mina sidor</a>
-      </nav>
-    </header>
-
-    <main class="profile-main">
-      <section class="profile-left">
-        <!-- Bokade städningar -->
-        <div class="booked-cleaning">
-          <h3 class="booked-cleaning__title">Bokade Städningar</h3>
-
-          <!-- Container som håller i "korten" -->
-          <div class="booked-cleaning__container">
-            <!-- Start Enskilt "kort" -->
-            <div class="booked-cleaning__container__item" id='pre-card'>
-              <div class="booked-cleaning__container__item__upper">
-                <p class="booked-cleaning__container__item__upper__title">
-                  Städning
-                </p>
-                <p class="booked-cleaning__container__item__upper__date">
-                  2022/03/22
-                </p>
+        <header>
+            <div id="top">
+                <h1>Mina Sidor</h1>
+            </div>
+            <nav>
+                <a id="home-a-tag" href="./index.html">Hem</a>
+                <a href="./cleaning-home.html">Boka städning</a>
+                <a id="login-link" href="./pages/login.html">Logga in</a>
+                <a id="logout-link" href="./index.html">Logga ut</a>
+                <a id="profile-link" href="./profile.html">Mina sidor</a>
+            </nav>
+        </header>
+        <main class="profile-main">
+           <section class="profile-left">
+              <!-- Bokade städningar -->
+              <div class="booked-cleaning">
+                 <h3 class="booked-cleaning__title">Bokade Städningar</h3>
+                  <!-- Container som håller i "korten" -->
+                 <div
+                        id="booked-cleaning__container"
+                        class="booked-cleaning__container"
+                 ></div>
               </div>
-              <div class="booked-cleaning__container__item__lower">
-                <p>Placeholder</p>
+              <!-- Färdiga städningar -->
+              <div class="completed-cleaning">
+                  <h3 class="completed-cleaning__title">
+                      Slutförda Städningar
+                  </h3>
+                  <!-- Container som håller i "korten" -->
+                  <div
+                      id="completed-cleaning__container"
+                      class="completed-cleaning__container"
+                  ></div>
               </div>
-              <div class="button-container">
-                <button class="deny-btn btn" id="cancel-btn" >Avboka</button>
+            </section>
+            <section class="profile-right">
+                <h3>Profil</h3>
+                <div class="profile-info">
+                    <span class="profile-info__subtitle">Information</span>
+                    <div class="profile-info__column">
+                        <p>Name:</p>
+                        <p id="user__name">John Doe</p>
+                    </div>
+                    <div class="profile-info__column">
+                        <p>Roll:</p>
+                        <p id="user__role">john@doe.com</p>
+                    </div>
+                    <span class="profile-info__subtitle">Städningar</span>
+                    <div class="profile-info__column">
+                        <p>Bokade Städningar:</p>
+                        <p id="bookedCleaningsCount"></p>
+                    </div>
+                    <div class="profile-info__column">
+                        <p>Slutförda Städningar:</p>
+                        <p id="completedCleaningsCount"></p>
+                    </div>
+                </div>
+                <span class="profile-info__edit">Redigera Profil</span>
+            </section>
+          <section class="profile-right">
+            <h3>Profil</h3>
+            <div class="profile-info">
+              <span class="profile-info__subtitle">Information</span>
+              <div class="profile-info__column">
+                <p>Name:</p>
+                <p id="user__name">John Doe</p>
+              </div>
+              <div class="profile-info__column">
+                <p>Roll:</p>
+                <p id="user__role">john@doe.com</p>
+              </div>
+              <span class="profile-info__subtitle">Städningar</span>
+              <div class="profile-info__column">
+                <p>Bokade Städningar:</p>
+                <p id="bookedCleaningsCount"></p>
+              </div>
+              <div class="profile-info__column">
+                <p>Slutförda Städningar:</p>
+                <p id="completedCleaningsCount"></p>
               </div>
             </div>
-            <!-- Slut Enskilt "kort" -->
-          </div>
-        </div>
-
-        <!-- Färdiga städningar -->
-        <div class="completed-cleaning">
-          <h3 class="completed-cleaning__title">Slutförda Städningar</h3>
-
-          <!-- Container som håller i "korten" -->
-          <div class="completed-cleaning__container">
-            <!-- Enskilt "kort" -->
-            <div class="completed-cleaning__container__item" id="card">
-              <div class="completed-cleaning__container__item__upper">
-                <p class="completed-cleaning__container__item__upper__title">
-                  Städning
-                </p>
-                <p class="completed-cleaning__container__item__upper__date">
-                  2022/03/22
-                </p>
-              </div>
-              <div class="completed-cleaning__container__item__lower">
-                <p>Placeholder</p>
-              </div>
-              <div class="button-container" id="accept-deny-container">
-                <button class="accept-btn btn" id="accept-btn">Godkänn 👍</button>
-                <button class="deny-btn btn" id="deny-btn">Underkänn 👎</button>
-              </div>
-            </div>
-            <!-- Slut Enskilt "kort" -->
-          </div>
-        </div>
-      </section>
-      <section class="profile-right">
-        <h3>Profil</h3>
-        <div class="profile-info">
-          <span class="profile-info__subtitle">Information</span>
-          <div class="profile-info__column">
-            <p>Name:</p>
-            <p id="user__name">John Doe</p>
-          </div>
-          <div class="profile-info__column">
-            <p>Roll:</p>
-            <p id="user__role">john@doe.com</p>
-          </div>
-          <span class="profile-info__subtitle">Städningar</span>
-          <div class="profile-info__column">
-            <p>Bokade Städningar:</p>
-            <p id="bookedCleaningsCount"></p>
-          </div>
-          <div class="profile-info__column">
-            <p>Slutförda Städningar:</p>
-            <p id="completedCleaningsCount"></p>
-          </div>
-        </div>
-        <span class="profile-info__edit">Redigera Profil</span>
-        <span class="profile-info__edit" id="gdpr-button">GDPR</span>
-      </section>
-    </main>
-  </body>
+            <span class="profile-info__edit">Redigera Profil</span>
+            <span class="profile-info__edit" id="gdpr-button">GDPR</span>
+          </section>
+ 
+        </main>
+    </body>
 </html>
