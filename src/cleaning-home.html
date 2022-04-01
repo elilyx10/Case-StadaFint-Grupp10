@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="./js/cleaning-home.js" type="module"></script>
+        <title>Grupp 10</title>
+    </head>
+    <body id="cleaning-home-body">
+        <div id="cleaning-modal" class="modal-in hidden">
+            <div id="cleaning-modal-background"></div>
+            <div class="modal-content">
+                <div id="__inner-modal-content"></div>
+
+                <div class="__buttons">
+                    <h4>Stämmer allt?</h4>
+                    <div>
+                        <a href="./cleaning-recipt.html" id="modal-confirm"
+                            >Ja</a
+                        >
+                        <button id="modal-deny">Nej</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <div id="top">
+                <h1>Boka Städning</h1>
+            </div>
+
+            <nav>
+                <a id="home-a-tag" href="./index.html">Hem</a>
+                <a href="./cleaning-home.html">Boka städning</a>
+                <a id="login-link" href="./pages/login.html">Logga in</a>
+                <a id="logout-link" href="./index.html">Logga ut</a>
+                <a id="profile-link" href="./profile.html">Mina sidor</a>
+            </nav>
+        </header>
+        <main>
+            <div id="cleaning-sessions">
+                <div class="form-wrapper">
+                    <div class="top">
+                        <span>Ny städning</span>
+                    </div>
+                    <div class="bottom">
+                        <form id="new-cleaning-form">
+                            <div>
+                                <div>
+                                    <label for="customer">Kund</label>
+                                    <select id="customer" required></select>
+                                </div>
+                                <div>
+                                    <label for="cleaner">Städare</label>
+                                    <select id="cleaner" required></select>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label for="date">Datum</label>
+                                    <input type="date" id="date" required />
+                                </div>
+                                <div>
+                                    <label for="time">Tid</label>
+                                    <input type="time" id="time" required />
+                                </div>
+                            </div>
+                            <label for="description"> Beskrivning </label>
+                            <textarea id="description" required></textarea>
+                            <input
+                                type="button"
+                                id="new-cleaning-confirm"
+                                value="Lägg till"
+                            />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <ul>
+                <ol>
+                    <h4>Authors</h4>
+                </ol>
+                <ol>
+                    Elias Fredriksson
+                </ol>
+                <ol>
+                    Elias Lyxell
+                </ol>
+                <ol>
+                    Johan Elgström
+                </ol>
+                <ol>
+                    Noah Lissner
+                </ol>
+            </ul>
+        </footer>
+    </body>
+</html>

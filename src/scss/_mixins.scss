@@ -1,0 +1,32 @@
+@use "variables";
+
+@mixin tablet() {
+    @media screen and (min-width: variables.$tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media screen and (min-width: variables.$desktop-breakpoint) {
+        @content;
+    }
+}
+
+// %actionButton {
+//     border-radius: 4pt;
+//     margin: 10pt;
+//     width: 40px;
+//     height: 40px;
+//     border: none;
+
+//     transition: transform 0.1s ease, background-color 0.1s ease;
+
+//     .fas {
+//         color: white;
+//         pointer-events: none;
+//     }
+
+//     &:hover {
+//         transform: scale(120%);
+//     }
+// }

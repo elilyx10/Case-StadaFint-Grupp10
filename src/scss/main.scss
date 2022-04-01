@@ -1,4 +1,14 @@
 // Link your scss modules here
+@use "cleaningHome";
+@use "cleaningRecipt";
+@use "variables";
+
+// Pages
+@use "pages/profile";
+
+* {
+    box-sizing: border-box;
+}
 
 html,
 body {
@@ -10,4 +20,35 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: variables.$color-light-brown;
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: variables.$color-dark-beige;
+            width: 100%;
+            a {
+                padding: 10px;
+                text-decoration: none;
+                color: black;
+                transition: 200ms ease;
+                &:hover {
+                    color: white;
+                    background-color: variables.$color-light-brown;
+                }
+            }
+        }
+    }
+    main {
+        flex-grow: 1;
+    }
+    footer {
+        background-color: variables.$color-light-brown;
+    }
 }
+
+@import "./pages/login-register.scss";
