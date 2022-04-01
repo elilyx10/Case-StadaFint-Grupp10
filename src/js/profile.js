@@ -184,3 +184,26 @@ function createStatusDiv(cleaning) {
     }
     return status;
 }
+
+// GDPR
+
+document.getElementById('gdpr-button').addEventListener('click', gdprHandeler)
+document.getElementById('gdpr-close').addEventListener('click', gdprCloseHandeler)
+
+function gdprHandeler() {
+  let modal = document.getElementById("gdpr-modal");
+
+  modal.classList.remove("modal-out");
+  modal.classList.add("modal-in");
+  modal.classList.remove("hidden");
+  modal.classList.add("visible");
+}
+
+function gdprCloseHandeler() {
+  let modal = document.getElementById("gdpr-modal");
+
+  modal.classList.remove("modal-in");
+  modal.classList.add("modal-out");
+  modal.classList.remove("visible");
+  modal.classList.add("hidden");
+}
